@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Independent Automation Work — Paid in USDT/USDC/GBP</title>
+  <style>
+    :root { --bg:#0f1419; --fg:#e7ecf1; --mut:#9aa7b5; --acc:#3dd6c6; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: "Segoe UI", system-ui, sans-serif; background:radial-gradient(1200px 600px at 10% -10%, #1b2a33, var(--bg)); color:var(--fg); }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height:1.15; margin: 0 0 12px; }
+    p { color: var(--mut); line-height:1.55; }
+    .card { border:1px solid #2a3844; background:#121a21; border-radius:14px; padding:20px; margin-top:24px; }
+    code { color: var(--acc); word-break: break-all; }
+    ul { color: var(--mut); }
+    .price { font-size:1.25rem; color:var(--fg); margin-top:8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Fixed-scope automation & agent work</h1>
+    <p>Independent engineer. Python/TS agents, API integrations, Linux ops tooling. Not affiliated with any existing client stack. Pay in USDC/USDT (EVM or Solana) or GBP by invoice.</p>
+    <div class="card">
+      <strong>Starter package</strong>
+      <div class="price">150 USDC / £120</div>
+      <ul>
+        <li>One automation or agent workflow, scoped in writing first</li>
+        <li>Working demo + source in a private repo</li>
+        <li>48h turnaround for well-defined tasks</li>
+      </ul>
+    </div>
+    <div class="card">
+      <strong>Pay USDT/USDC (EVM)</strong>
+      <p><code id="evm">LOADING</code></p>
+      <strong>Pay USDC (Solana)</strong>
+      <p><code id="sol">LOADING</code></p>
+      <p>After payment, email tx hash + brief to the operator handling this offer.</p>
+    </div>
+  </main>
+  <script>
+    // filled at build/serve time from PAYOUT_ADDRESS.txt — placeholder until synced
+    document.getElementById('evm').textContent = '0x1bE01b442997d86C5B19B346F6c8835867c0D84E';
+    document.getElementById('sol').textContent = '7YZFNmDvB8mUm6oabugxqba8J2AFuN6yrR4nvCZihA4o';
+  </script>
+</body>
+</html>
